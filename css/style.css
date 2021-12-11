@@ -1,0 +1,319 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "icons";
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 320px;
+}
+
+body {
+  line-height: 1;
+  font-family: "";
+  font-size: 1.25rem;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+input,
+button,
+textarea {
+  font-family: "";
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+  background-color: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+body {
+  color: #fff;
+  background: #333;
+}
+
+.lock body {
+  overflow: hidden;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: -ms-grid;
+  display: grid;
+  overflow: hidden;
+  -ms-grid-rows: auto 1fr auto;
+  grid-template-rows: auto 1fr auto;
+}
+
+/*
+(i) Стили будут применяться ко 
+всем классам содержащим *__container
+Например header__container, main__container и т.д.
+Снипет (HTML): cnt
+*/
+
+[class*=__container] {
+  max-width: 73.125rem;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  margin: 0 auto;
+  padding: 0 0.9375rem;
+}
+
+[data-fullscreen] {
+  height: 100vh;
+}
+
+.touch [data-fullscreen] {
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+[class*=__image-ibg] {
+  position: relative;
+}
+
+[class*=__image-ibg] img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/*
+.icon-menu {
+	display: none;
+	@media (max-width: $mobile) {
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 18px;
+		cursor: pointer;
+		z-index: 5;
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			left: 0px;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background-color: #000;
+		}
+		&::before {
+			top: 0px;
+		}
+		&::after {
+			bottom: 0px;
+		}
+		span {
+			top: calc(50% - 1px);
+		}
+		.menu-open & {
+			span {
+				transform: scale(0);
+			}
+			&::before {
+				transform: rotate(-45deg);
+				top: calc(50% - 1px);
+			}
+			&::after {
+				transform: rotate(45deg);
+				bottom: calc(50% - 1px);
+			}
+		}
+	}
+}
+*/
+
+.page {
+  min-width: 0;
+}
+
+.main-block {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 12px;
+  background: #867;
+}
+
+.main-block__button {
+  background: #666799;
+  padding: 5px 23px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.main-block__text {
+  padding: 10px;
+  background: #689966;
+}
+
+.main-block__text:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.newButton {
+  background: #996696;
+  padding: 5px 23px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.bbb *:not(.main-block__button) {
+  display: none;
+}
+
+.block-second {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 12px;
+  background: #678866;
+}
+
+.block-second__button {
+  background: #668b99;
+  padding: 5px 23px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.block-second__text {
+  padding: 17px;
+  background: #986;
+  height: 100px;
+  overflow: hidden;
+}
+
+.wiev {
+  height: auto;
+}
+
+.hh {
+  color: blue;
+}
+
+.block-third {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 12px;
+  background: #838866;
+}
+
+.block-third__li {
+  background: #669996;
+  padding: 5px 23px;
+  margin-bottom: 15px;
+}
+
+.act {
+  color: red;
+}
+
+.block-four {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 12px;
+  background: #7c8866;
+}
+
+.block-four__button {
+  background: #668b99;
+  padding: 5px 23px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.block-four__button_more {
+  background: #66996d;
+  padding: 5px 23px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.bl-five {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 12px;
+  background: #876688;
+}
+
+.bl-five__form {
+  padding: 12px;
+  background: #667188;
+}
+
+.bl-five__label {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.bl-five__label span:last-child {
+  display: none;
+}
+
+@media (max-width: 47.99875em) {
+  .touch [data-fullscreen] {
+    -webkit-transition: height 0.2s;
+    -o-transition: height 0.2s;
+    transition: height 0.2s;
+  }
+}
